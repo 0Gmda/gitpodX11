@@ -27,4 +27,4 @@ RUN apt-get install -y chromium-browser
 
 RUN apt-get install -f
 
-chromium-browser &
+RUN chromium-browser &
