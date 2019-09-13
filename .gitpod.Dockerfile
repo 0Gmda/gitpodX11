@@ -18,4 +18,4 @@ RUN apt-get update \
 RUN apt-get install -y twm xterm
 
 RUN sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-RUN apt-get install -y google-chrome-stable
+RUN apt install -y google-chrome-stable
