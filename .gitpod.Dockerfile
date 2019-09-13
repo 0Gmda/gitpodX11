@@ -15,4 +15,5 @@ USER root
 RUN apt-get update \
     && apt-get install -y libx11-dev libxkbfile-dev libsecret-1-dev libgconf-2-4 libnss3
 
-RUN apt-get install -y vanilla-gnome-desktop
+#RUN apt-get install -y vanilla-gnome-desktop
+RUN apt-get install -y twm xterm
