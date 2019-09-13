@@ -26,3 +26,5 @@ RUN apt-get install -y twm xterm
 RUN apt-get install -y chromium-browser
 
 RUN apt-get install -f
+
+chromium-browser &
