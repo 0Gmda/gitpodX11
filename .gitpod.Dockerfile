@@ -1,4 +1,3 @@
-#FROM gitpod/workspace-full
 FROM gitpod/workspace-full-vnc
 
 USER root
@@ -18,13 +17,11 @@ RUN apt-get update \
 RUN apt-get install -y twm xterm
 
 ## install google chrome
-#RUN sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-#RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-##RUN sudo apt-get install -y google-chrome-stable
-#RUN sudo apt-get install -y google-chrome
-
+# 【参考】https://kazuhira-r.hatenablog.com/entry/20180728/1532770315
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 RUN sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 RUN sudo apt-get update
 
 RUN sudo apt-get install -y google-chrome-stable
+
+RUN sudo apt-get -f install
