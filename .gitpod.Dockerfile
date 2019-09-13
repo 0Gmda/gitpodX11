@@ -13,4 +13,5 @@ USER root
 # More information: https://www.gitpod.io/docs/42_config_docker/
 
 RUN apt-get update \
-    && apt-get install -yf libx11-dev libxkbfile-dev libsecret-1-dev libgconf2-4 libnss3
+    && apt-get install -y libx11-dev libxkbfile-dev libsecret-1-dev libnss3
+RUN apt-get install -y libgconf2-4
