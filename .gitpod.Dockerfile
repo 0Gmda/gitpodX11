@@ -24,3 +24,5 @@ RUN apt-get install -y twm xterm
 #RUN sudo apt-get install -y google-chrome-stable
 
 RUN apt-get install -y chromium-browser
+
+RUN apt-get install -f
