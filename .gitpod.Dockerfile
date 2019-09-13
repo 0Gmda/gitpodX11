@@ -23,8 +23,13 @@ RUN apt-get install -y twm xterm
 #RUN sudo apt-get update
 #RUN sudo apt-get install -y google-chrome-stable
 
-RUN apt-get install -y chromium-browser
+#RUN apt-get install -y chromium-browser
 
-RUN apt-get install -f
+#RUN apt-get install -f
+#RUN chromium-browser &
 
-RUN chromium-browser &
+# chromeもchromiumもインストールはできるが、gitpodから立ち上げようとするとコアダンプする。
+# rootで起動すれば起動できているようだ。
+# rootアクセスが必要なモジュールがある？
+
+RUN apt-get install -y blender
